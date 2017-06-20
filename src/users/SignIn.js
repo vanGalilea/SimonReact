@@ -21,7 +21,7 @@ const buttonStyle = {
 }
 
 export class SignIn extends PureComponent {
-  static propTypes = {
+  static PropTypes = {
     push: PropTypes.func.isRequired,
     signIn: PropTypes.func.isRequired,
     signedIn: PropTypes.bool,
@@ -48,8 +48,6 @@ export class SignIn extends PureComponent {
   render() {
     return (
       <Paper style={ dialogStyle }>
-        <Title content="Sign In" level={2} />
-
         <form onSubmit={this.submitForm.bind(this)}>
           <div className="input">
             <TextField ref="email" type="email" hintText="Email address" />
