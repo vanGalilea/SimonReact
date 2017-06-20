@@ -1,0 +1,43 @@
+.flex-container {
+  margin: 100px auto;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  flex-wrap: wrap; }
+
+.green {
+  background: green;
+  border-bottom-right-radius: 100%;
+  margin: auto;
+  height: 240px;
+  width: 240px; }
+
+.red {
+  background: red;
+  border-bottom-left-radius: 100%;
+  margin: auto;
+  height: 240px;
+  width: 240px; }
+
+.yellow {
+  background: yellow;
+  border-top-left-radius: 100%;
+  margin: auto;
+  height: 240px;
+  width: 240px; }
+
+.blue {
+  background: blue;
+  border-top-right-radius: 100%;
+  margin: auto;
+  height: 240px;
+  width: 240px; }
+
+.center {
+  position: absolute;
+  border-radius: 100%;
+  margin: 150px 0 0 150px;
+  background: white;
+  width: 200px;
+  height: 200px;
+  border: 12px solid #333; }
