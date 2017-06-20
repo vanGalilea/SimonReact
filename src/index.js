@@ -7,6 +7,8 @@ import store, { history } from './store'
 import registerServiceWorker from './registerServiceWorker'
 
 import App from './App'
+import SignUp from './users/SignUp'
+import SignIn from './users/SignIn'
 
 import './index.css'
 
@@ -14,6 +16,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
+
+        <Route path="/sign-up" component={SignUp} />
+        <Route path="/sign-in" component={SignIn} />
 
       </Route>
     </Router>
