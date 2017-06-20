@@ -48,6 +48,7 @@ export class SignIn extends PureComponent {
   render() {
     return (
       <Paper style={ dialogStyle }>
+        <h2>Sign In</h2>
         <form onSubmit={this.submitForm.bind(this)}>
           <div className="input">
             <TextField ref="email" type="email" hintText="Email address" />
