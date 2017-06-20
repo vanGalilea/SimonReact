@@ -7,6 +7,7 @@ import {
   LOAD_ERROR,
   LOAD_SUCCESS
 } from '../loading'
+import { push } from 'react-router-redux';
 
 export const USER_SIGNED_IN = 'USER_SIGNED_IN'
 
