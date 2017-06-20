@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import signUp from '../actions/user/sign-up'
-import Title from '../components/Title'
+
 
 export class SignUp extends PureComponent {
   constructor() {
@@ -40,7 +40,7 @@ export class SignUp extends PureComponent {
     }
 
     this.setState({
-      nameError: 'Please provide your name'
+      nameError: 'Nme field is not valid'
     })
     return false
   }
@@ -57,13 +57,13 @@ export class SignUp extends PureComponent {
 
     if (email.value === '') {
       this.setState({
-        emailError: 'Please provide your email address'
+        emailError: 'Type in your email address'
       })
       return false
     }
 
     this.setState({
-      emailError: 'Please provide a valid email address'
+      emailError: 'Email address not valid !'
     })
     return false
   }
@@ -73,7 +73,7 @@ export class SignUp extends PureComponent {
 
     if (password.value.length < 6) {
       this.setState({
-        passwordError: 'Password is too short'
+        passwordError: 'Password too short'
       })
       return false
     }

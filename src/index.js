@@ -7,6 +7,7 @@ import store, { history } from './store'
 import registerServiceWorker from './registerServiceWorker'
 
 import App from './App'
+
 import SignUp from './users/SignUp'
 import SignIn from './users/SignIn'
 
