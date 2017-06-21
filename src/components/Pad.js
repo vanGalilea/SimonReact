@@ -8,12 +8,18 @@ class Pad extends PureComponent {
   }
 
   onClick = (event) =>{
-    this.props.sound.play()
+    const { color, sound } = this.props
+    let padDiv = event.target
+    padDiv.className = color + " anim"
+    sound.playbackRate = 0.6
+    sound.play()
+    setTimeout(() =>{ padDiv.className = color }, 500)
   }
+
 
   render() {
     return (
-      <div className={this.props.color} onClick={this.onClick}> 
+      <div ref="padDiv" className={this.props.color} onClick={this.onClick}>
       </div>
     );
   }

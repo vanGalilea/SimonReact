@@ -14,12 +14,15 @@ class Navigation extends PureComponent {
     push: PropTypes.func.isRequired,
     signOut: PropTypes.func.isRequired,
   }
+  
   signUp = () => {
     this.props.push('/sign-up')
   }
+
   goHome = () => {
     this.props.push('/')
   }
+
   render() {
     const { signedIn, signOut } = this.props
     return (
