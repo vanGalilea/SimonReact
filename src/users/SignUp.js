@@ -13,16 +13,20 @@ const dialogStyle = {
   margin: '50px auto',
   padding: '2rem',
 }
+
 const buttonStyle = {
   float: 'right',
   marginLeft: '2rem',
 }
+
 export class SignUp extends PureComponent {
   static propTypes = {
     push: PropTypes.func.isRequired,
     signUp: PropTypes.func.isRequired,
   }
+
   state = {}
+
   submitForm(event) {
     event.preventDefault()
     if (this.validateAll()) {
@@ -35,15 +39,18 @@ export class SignUp extends PureComponent {
     }
     return false
   }
+
   signIn() {
     this.props.push('/sign-in')
   }
+
   validateAll() {
     return this.validateName() &&
       this.validateEmail() &&
       this.validatePassword() &&
       this.validatePasswordConfirmation()
   }
+
   validateName() {
     const { name } = this.refs
     if (name.getValue().length > 1) {
@@ -57,6 +64,8 @@ export class SignUp extends PureComponent {
     })
     return false
   }
+
+
   validateEmail() {
     const { email } = this.refs
     if (email.getValue().match(/^[a-z0-9._-]+@[a-z0-9._-]+.[a-z0-9._-]+$/)) {
@@ -76,6 +85,8 @@ export class SignUp extends PureComponent {
     })
     return false
   }
+
+
   validatePassword() {
     const { password } = this.refs
     if (password.getValue().length < 6) {
@@ -95,6 +106,8 @@ export class SignUp extends PureComponent {
     })
     return false
   }
+
+
   validatePasswordConfirmation() {
     const { password, passwordConfirmation } = this.refs
     if (password.value === passwordConfirmation.value) {
@@ -108,6 +121,7 @@ export class SignUp extends PureComponent {
     })
     return false
   }
+
   render() {
     return (
       <Paper style={ dialogStyle }>
