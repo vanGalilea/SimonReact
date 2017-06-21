@@ -6,7 +6,7 @@ import { Router, Route, IndexRoute } from 'react-router'
 import store, { history } from './store'
 import registerServiceWorker from './registerServiceWorker'
 import injectTapEventPlugin from 'react-tap-event-plugin'
-
+import SimonGame from './components/SimonGame'
 import App from './App'
 
 import SignUp from './users/SignUp'
@@ -18,10 +18,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-
         <Route path="/sign-up" component={SignUp} />
         <Route path="/sign-in" component={SignIn} />
-
+        <Route path="/game" component={SimonGame} />
       </Route>
     </Router>
   </Provider>,
