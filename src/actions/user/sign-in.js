@@ -23,8 +23,6 @@ export default (user) => {
         dispatch({ type: APP_DONE_LOADING })
         dispatch({ type: LOAD_SUCCESS })
 
-        api.app.set('user', user)
-
         history.replace('/')
 
         dispatch({

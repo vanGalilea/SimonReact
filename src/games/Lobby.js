@@ -33,6 +33,7 @@ class Lobby extends PureComponent {
   }
 
   isPlayer(game) {
+    if (this.props.currentUser == null) return false
     return game.players
       .map((p) => (p.userId))
       .includes(this.props.currentUser._id)
