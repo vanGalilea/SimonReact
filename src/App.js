@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import muiTheme from './assets/styles/theme'
 import PropTypes from 'prop-types'
 import Navigation from './components/Navigation'
+import LoadErrorMessage from './components/LoadErrorMessage'
 
 class App extends Component {
   static childContextTypes = {
@@ -17,12 +18,15 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-        <div className="App">
+        <div>
           <Navigation />
-          { this.props.children }
+          <div className="App">
+            { this.props.children }
+          </div>
+          <LoadErrorMessage />
         </div>
       </MuiThemeProvider>
-    );
+    )
   }
 }
 
