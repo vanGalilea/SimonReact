@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { Router, Route, IndexRoute } from 'react-router'
+import { Router, Route} from 'react-router'
 import store, { history } from './store'
 import registerServiceWorker from './registerServiceWorker'
 import injectTapEventPlugin from 'react-tap-event-plugin'

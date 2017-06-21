@@ -4,7 +4,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import muiTheme from './assets/styles/theme'
 import PropTypes from 'prop-types'
 import Navigation from './components/Navigation'
-import SimonGame from './components/SimonGame'
 
 class App extends Component {
   static childContextTypes = {
