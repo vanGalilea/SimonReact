@@ -14,7 +14,7 @@ class Navigation extends PureComponent {
     push: PropTypes.func.isRequired,
     signOut: PropTypes.func.isRequired,
   }
-  
+
   signUp = () => {
     this.props.push('/sign-up')
   }
@@ -37,7 +37,10 @@ class Navigation extends PureComponent {
     )
   }
 }
+
+
 const mapStateToProps = ({ currentUser }) => ({
   signedIn: !!currentUser && !!currentUser._id,
 })
+
 export default connect(mapStateToProps, { push, signOut })(Navigation)
