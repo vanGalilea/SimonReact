@@ -41,3 +41,6 @@
   width: 200px;
   height: 200px;
   border: 12px solid #333; }
+
+.anim {
+  opacity: 0.2; }
