@@ -1,4 +1,9 @@
 import React, { PureComponent } from 'react'
+import JoinGameDialog from '../games/JoinGameDialog'
+import { connect } from 'react-redux'
+import getCurrentGame from '../actions/games/get'
+import fetchGames from '../actions/games/fetch'
+import subscribeToGames from '../actions/games/subscribe'
 import Pad from './Pad'
 import './SimonGame.css'
 
@@ -10,6 +15,15 @@ const sounds = [
 ]
 
 class SimonGame extends PureComponent {
+  componentWillMount() {
+    const { game, fetchGames, getCurrentGame, subscribeToGames, subscribed } = this.props
+    const { gamesId } = this.props.params
+    debugger
+
+    if (!game) fetchGames()
+    getCurrentGame(gamesId)
+    if (!subscribed) subscribeToGames()
+ }
 
   render() {
     return(
@@ -19,9 +33,23 @@ class SimonGame extends PureComponent {
         <Pad color="red" sound={sounds[2]}/>
         <Pad color="green" sound={sounds[3]}/>
         <div className="center"></div>
+
+        <JoinGameDialog />
       </div>
     )
   }
 }
 
-export default SimonGame
+const mapStateToProps = ({ currentGame, games, subscriptions }) => {
+  const game = games.filter((g) => (g._id === currentGame))[0]
+  return {
+    game,
+    subscribed: subscriptions.includes('games'),
+  }
+}
+
+export default connect(mapStateToProps, {
+  getCurrentGame,
+  fetchGames,
+  subscribeToGames,
+})(SimonGame)
