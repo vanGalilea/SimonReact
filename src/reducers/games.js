@@ -1,4 +1,5 @@
 import { FETCHED_GAMES } from '../actions/games/fetch'
+import { PAD_PUSHED } from '../actions/games/pushPad'
 import {
   GAME_CREATED,
   GAME_UPDATED,
@@ -15,6 +16,7 @@ export default (state = [], { type, payload } = {}) => {
       const newGame = { ...payload }
       return [newGame].concat(state)
 
+    case PAD_PUSHED :
     case GAME_UPDATED :
       return state.map((game) => {
         if (game._id === payload._id) {

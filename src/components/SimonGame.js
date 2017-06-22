@@ -18,8 +18,6 @@ class SimonGame extends PureComponent {
   componentWillMount() {
     const { game, fetchGames, getCurrentGame, subscribeToGames, subscribed } = this.props
     const { gamesId } = this.props.params
-    debugger
-
     if (!game) fetchGames()
     getCurrentGame(gamesId)
     if (!subscribed) subscribeToGames()
