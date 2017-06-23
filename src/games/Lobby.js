@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 import fetchGames from '../actions/games/fetch'
 import subscribeToGames from '../actions/games/subscribe'
+import getCurrentGame from '../actions/games/get'
 import CreateGameButton from './CreateGameButton'
 import Paper from 'material-ui/Paper'
 import Menu from 'material-ui/Menu'
@@ -21,7 +22,7 @@ class Lobby extends PureComponent {
 
   goToGame(gameId) {
     const { push } = this.props
-
+    getCurrentGame(gameId)
     return () => {
       push(`/games/${gameId}`)
     }

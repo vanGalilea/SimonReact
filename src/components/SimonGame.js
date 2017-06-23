@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import JoinGameDialog from '../games/JoinGameDialog'
+import Scoreboard from '../games/Scoreboard'
 import { connect } from 'react-redux'
 import getCurrentGame from '../actions/games/get'
 import fetchGames from '../actions/games/fetch'
@@ -16,32 +17,40 @@ const sounds = [
 
 class SimonGame extends PureComponent {
   componentWillMount() {
-    const { game, fetchGames, getCurrentGame, subscribeToGames, subscribed } = this.props
+    const { games, fetchGames, getCurrentGame, subscribeToGames, subscribed } = this.props
     const { gamesId } = this.props.params
+    const game = this.props.games.filter((g) => (g._id === this.props.params.gamesId))[0]
+
     if (!game) fetchGames()
     getCurrentGame(gamesId)
     if (!subscribed) subscribeToGames()
  }
 
   render() {
-    return(
-      <div className='flex-container'>
-        <Pad color="yellow" sound={sounds[0]}/>
-        <Pad color="blue" sound={sounds[1]}/>
-        <Pad color="red" sound={sounds[2]}/>
-        <Pad color="green" sound={sounds[3]}/>
-        <div className="center"></div>
+    const game = this.props.games.filter((g) => (g._id === this.props.params.gamesId))[0]
 
-        <JoinGameDialog />
+    return(
+      <div>
+        <Scoreboard game={game} />
+
+        <div className='flex-container'>
+
+          <Pad color="yellow" sound={sounds[0]}/>
+          <Pad color="blue" sound={sounds[1]}/>
+          <Pad color="red" sound={sounds[2]}/>
+          <Pad color="green" sound={sounds[3]}/>
+          <div className="center"></div>
+
+          <JoinGameDialog />
+        </div>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({ currentGame, games, subscriptions }) => {
-  const game = games.filter((g) => (g._id === currentGame))[0]
+const mapStateToProps = ({ games, subscriptions }) => {
   return {
-    game,
+    games,
     subscribed: subscriptions.includes('games'),
   }
 }
