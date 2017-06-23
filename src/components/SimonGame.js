@@ -26,6 +26,9 @@ class SimonGame extends PureComponent {
   render() {
     return(
       <div className='flex-container'>
+        <div className="yourturn">Player 1!</div>
+        <div className="backstuff"></div>
+        <div className="back"></div>
         <Pad color="yellow" sound={sounds[0]}/>
         <Pad color="blue" sound={sounds[1]}/>
         <Pad color="red" sound={sounds[2]}/>
