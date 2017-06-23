@@ -44,7 +44,6 @@ class SimonGame extends PureComponent {
           <JoinGameDialog className="scores" />
           <div className="center"></div>
 
-          <JoinGameDialog className="scores" />
         </div>
       </div>
     )
