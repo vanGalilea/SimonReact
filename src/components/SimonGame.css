@@ -1,46 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Bangers");
 .flex-container {
   margin: 100px auto;
   display: flex;
   width: 500px;
   height: 500px;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  z-index: 0; }
+
+.backstuff {
+  position: absolute;
+  background-color: red;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/127/448/non_2x/wood-texture-vector.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 875px;
+  width: 1650px;
+  margin: -100px 0 0 -575px; }
+
+.yourturn {
+  position: absolute;
+  font-family: Bangers;
+  font-size: 6em;
+  color: white;
+  text-shadow: #000 5px 5px 20px;
+  margin: -30px 0 0 -300px; }
 
 .green {
   background: green;
+  border: solid 3px darkgreen;
+  border-radius: 10px;
   border-bottom-right-radius: 100%;
   margin: auto;
   height: 240px;
-  width: 240px; }
+  width: 240px;
+  opacity: 0.7;
+  z-index: 1;
+  box-shadow: 1px 1px 10px #111; }
 
 .red {
   background: red;
+  border: solid 3px darkred;
+  border-radius: 10px;
   border-bottom-left-radius: 100%;
   margin: auto;
   height: 240px;
-  width: 240px; }
+  width: 240px;
+  opacity: 0.7;
+  z-index: 1;
+  box-shadow: 5px 1px 10px #111; }
 
 .yellow {
   background: yellow;
+  border: solid 3px orange;
+  border-radius: 10px;
   border-top-left-radius: 100%;
   margin: auto;
   height: 240px;
-  width: 240px; }
+  width: 240px;
+  opacity: 0.7;
+  z-index: 1;
+  box-shadow: 5px 1px 10px #111; }
 
 .blue {
   background: blue;
+  border: solid 3px darkblue;
+  border-radius: 10px;
   border-top-right-radius: 100%;
   margin: auto;
   height: 240px;
-  width: 240px; }
+  width: 240px;
+  opacity: 0.7;
+  z-index: 1;
+  box-shadow: 0px 1px 10px #111; }
 
 .center {
+  background: -webkit-radial-gradient(center, circle cover, #555 0%, #111 100%);
+  background-color: #555;
   position: absolute;
   border-radius: 100%;
-  margin: 138px 0 0 138px;
-  background: white;
+  margin: 142px 0 0 142px;
   width: 200px;
   height: 200px;
-  border: 12px solid #333; }
+  border: 8px solid #333;
+  z-index: 2; }
+
+.back {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  margin: -35px 0 0 -35px;
+  box-shadow: 10px 10px 55px black;
+  background: -webkit-radial-gradient(center, circle cover, #aaa 0%, black 100%);
+  background-color: #aaa;
+  width: 550px;
+  height: 550px;
+  border: 10px solid #333; }
 
 .anim {
-  opacity: 0.2; }
+  opacity: 1; }
