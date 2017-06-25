@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   height: 875px;
   width: 1650px;
-  margin: -100px 0 0 -1000px;
+  margin: -100px 0 0 -1053px;
   z-index: -1; }
 
 .green {
@@ -96,7 +96,7 @@
   font-size: 1.75em;
   color: white;
   text-shadow: #000 5px 5px 20px;
-  margin: -220px 0 0 -630px; }
+  margin: -220px 0 0 -830px; }
 
 .lists {
   list-style: none;
@@ -120,7 +120,7 @@
   background-color: rgba(105, 238, 147, 0.8);
   border-radius: 10px;
   padding-left: 7px;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
   box-shadow: 7px 10px 40px #111; }
 
 .anim {

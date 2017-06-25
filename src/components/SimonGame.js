@@ -8,10 +8,10 @@ import subscribeToGames from '../actions/games/subscribe'
 import Pad from './Pad'
 import './SimonGame.css'
 const sounds = [
-  new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"),
-  new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"),
-  new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"),
-  new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3")
+  new Audio("http://res.cloudinary.com/dqmqi1nxq/video/upload/v1498231683/196528_margo-heston_yellow-m_online-audio-converter.com_mk3jqq.mp3"),
+  new Audio("http://res.cloudinary.com/dqmqi1nxq/video/upload/v1498231686/196534_margo-heston_blue-m_online-audio-converter.com_rzsen6.mp3"),
+  new Audio("http://res.cloudinary.com/dqmqi1nxq/video/upload/v1498231781/196544__margo-heston__red-m_ny15a8.mp3"),
+  new Audio("http://res.cloudinary.com/dqmqi1nxq/video/upload/v1498231278/196521__margo-heston__green-m_bxsxar.mp3")
 ]
 let yellow = "yellow"
 let blue = "blue"
